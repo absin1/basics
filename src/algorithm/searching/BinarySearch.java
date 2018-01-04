@@ -7,22 +7,41 @@ public class BinarySearch {
 	 * arr[] of n elements, write a function to search a given element x in
 	 * arr[].
 	 */
-	static int search(int arr[], int start, int end, int find) {
+	static int recursiveSearch(int arr[], int start, int end, int find) {
 		if (start <= end) {
 			int i = (start + end) / 2;
 			if (arr[i] > find)
-				return search(arr, start, i - 1, find);
+				return recursiveSearch(arr, start, i - 1, find);
 			else if (arr[i] < find)
-				return search(arr, i + 1, end, find);
+				return recursiveSearch(arr, i + 1, end, find);
 			else
 				return i;
 		}
 		return -1;
 	}
 
+	static int iterativeSearch(int arr[], int find) {
+		int start = 0;
+		int end = arr.length - 1;
+		int index = -1;
+		while (start <= end) {
+			int mid = (start + end) / 2;
+			if (arr[mid] > find)
+				end = mid - 1;
+			if (arr[mid] < find)
+				end = mid - 1;
+			if (arr[mid] == find) {
+				index = mid;
+				break;
+			}
+		}
+		return index;
+	}
+
 	public static void main(String args[]) {
 		int[] arr = { 1, 2, 3, 5, 6 };
 		int find = 4;
-		System.out.println(search(arr, 0, arr.length - 1, find));
+		System.out.println(recursiveSearch(arr, 0, arr.length - 1, find));
+		System.out.println(iterativeSearch(arr, find));
 	}
 }

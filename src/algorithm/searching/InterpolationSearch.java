@@ -2,8 +2,10 @@ package algorithm.searching;
 
 /**
  * 
- * @author absin Given a sorted array of n uniformly distributed values arr[],
- *         write a function to search for a particular element x in the array.
+ * @author absin
+ * 
+ *         Given a sorted array of n uniformly distributed values arr[], write a
+ *         function to search for a particular element x in the array.
  * 
  *         Linear Search finds the element in O(n) time, Jump Search takes O(√
  *         n) time and Binary Search take O(Log n) time. The Interpolation
@@ -25,6 +27,10 @@ package algorithm.searching;
  *         arr[] ==> Array where elements need to be searched x ==> Element to
  *         be searched lo ==> Starting index in arr[] hi ==> Ending index in
  *         arr[]
+ * 
+ * 
+ *         Time Complexity : If elements are uniformly distributed, then O (log
+ *         log n)). In worst case it can take upto O(n). Auxiliary Space : O(1)
  */
 public class InterpolationSearch {
 	public static void main(String[] args) {

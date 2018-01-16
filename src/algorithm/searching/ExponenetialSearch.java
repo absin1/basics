@@ -30,6 +30,16 @@ package algorithm.searching;
  *         Binary Search for an example. It works better than Binary Search for
  *         bounded arrays also when the element to be searched is closer to the
  *         first element.
+ * 
+ * 
+ *         Applications of Exponential Search:
+ * 
+ *         Exponential Binary Search is particularly useful for unbounded
+ *         searches, where size of array is infinite. Please refer Unbounded
+ *         Binary Search for an example.
+ * 
+ *         It works better than Binary Search for bounded arrays also when the
+ *         element to be searched is closer to the first element.
  *
  */
 public class ExponenetialSearch {

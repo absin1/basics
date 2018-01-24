@@ -17,6 +17,7 @@ public class BinarySearch {
 			else
 				return i;
 		}
+		System.out.println(start + ">>" + end);
 		return -1;
 	}
 
@@ -29,19 +30,20 @@ public class BinarySearch {
 			if (arr[mid] > find)
 				end = mid - 1;
 			if (arr[mid] < find)
-				end = mid - 1;
+				start = mid + 1;
 			if (arr[mid] == find) {
 				index = mid;
 				break;
 			}
 		}
+		System.out.println(start + ">>" + end);
 		return index;
 	}
 
 	public static void main(String args[]) {
-		int[] arr = { 1, 2, 3, 5, 6 };
-		int find = 4;
-		System.out.println(recursiveSearch(arr, 0, arr.length - 1, find));
+		int[] arr = { -1, 2, 3, 5, 6, 8, 9, 10 };
+		int find = 7;
+		// System.out.println(recursiveSearch(arr, 0, arr.length - 1, find));
 		System.out.println(iterativeSearch(arr, find));
 	}
 }

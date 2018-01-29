@@ -18,7 +18,12 @@ import java.util.Arrays;
  *         (considering ascending order) from the unsorted subarray is picked
  *         and moved to the sorted subarray.
  *
- *
+ *         Time Complexity: O(n2) as there are two nested loops.
+ * 
+ *         Auxiliary Space: O(1) The good thing about selection sort is it never
+ *         makes more than O(n) swaps and can be useful when memory write is a
+ *         costly operation.
+ * 
  *         Important thing to note down here is that there is a swapping action
  *         involved between the end of the unsorted array and the minimum
  *         element found. Can you think why?
@@ -31,7 +36,7 @@ public class SelectionSort {
 	 */
 	public static void main(String[] args) {
 		int arr[] = { 64, 25, 12, 22, 11 };
-		//Iterative(arr);
+		// Iterative(arr);
 		recursive(arr, 0);
 	}
 
@@ -48,8 +53,8 @@ public class SelectionSort {
 		}
 		if (sortedIndex < arr.length)
 			recursive(arr, sortedIndex + 1);
-		else{
-		System.out.println(Arrays.toString(arr));
+		else {
+			System.out.println(Arrays.toString(arr));
 			return;
 		}
 	}
